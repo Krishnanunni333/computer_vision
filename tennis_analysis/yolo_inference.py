@@ -2,4 +2,9 @@ from ultralytics import YOLO
 
 model = YOLO("yolov8x")
 
-model.predict('tennis_analysis/input_videos/image.png', save=True)
+result = model.predict('tennis_analysis/input_videos/input_video.mp4', save=True)
+
+print(result)
+
+for box in result:
+    print(box)
